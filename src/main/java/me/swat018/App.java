@@ -5,7 +5,17 @@ package me.swat018;
  *
  */
 public class App {
+
+    static String name;
+
+    static {
+        name = "jinwoo";
+    }
+
     public static void main( String[] args ) {
-        System.out.println( "Hello World!" );
+        ClassLoader classLoader = App.class.getClassLoader();
+        System.out.println(classLoader);
+        System.out.println(classLoader.getParent());
+        System.out.println(classLoader.getParent().getParent());
     }
 }
